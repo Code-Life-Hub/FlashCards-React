@@ -4,8 +4,8 @@ function Header() {
     return (
         <header className="jumbotron bg-dark">
             <div className="container text-white">
-                <h1 className="display-4">Courtneys Study Buddy</h1>
-                <p className="lead">I Love You -D</p>
+                <h1 className="display-4">Flash Card-O-Matic </h1>
+                <p className="lead">Created with React</p>
             </div>
         </header>
     );
