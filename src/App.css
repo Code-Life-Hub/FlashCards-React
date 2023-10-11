@@ -1,4 +1,125 @@
 body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+  background-image: url("./utils/header-IMG.jpg");
 }
+
+header {
+  background-image: url("./utils/header-IMG.jpg");
+  border: black;
+}
+
+h1 {
+    color: white;
+    text-decoration:underline;
+}
+
+h3 {
+    color:white !important;
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+h4 {
+    color:white !important;
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+h4.card-title.text-body {
+    color:white !important;
+}
+
+p {
+    color:white !important;
+    font-style:italic;
+}
+.btn.btn-danger {
+    background-color: red;
+    color: white;
+}
+
+.btn.btn-danger:hover {
+    background-color: blue;
+    color: white;
+}
+
+.btn.btn-secondary {
+    background-color: rgb(6, 190, 6);
+    color: white;
+}
+
+.btn.btn-primary:Hover {
+    background-color:rgb(5, 187, 5);
+}
+
+.btn.btn-secondary:Hover {
+    background-color: blue;
+    color: white;
+}
+.btn.btn-primary {
+    background-color: rgb(32, 65, 229);
+    color: white;
+}
+
+.breadcrumb {
+    background-image: url("./utils/header-IMG.jpg");
+}
+
+a.breadcrumb-item {
+    color: white !important;
+}
+
+.breadcrumb-item.active {
+    color: rgb(11, 202, 11);
+    text-decoration: underline;
+    font-weight:bold;
+}
+
+.breadcrumb-item a:not(.active) {
+    color: white !important;
+}
+
+.form-label {
+    color: white;
+    text-decoration: underline;
+    font-weight:bold;
+}
+
+.card-body {
+  color: white;
+  background-image: url("./utils/header-IMG.jpg");
+  border: black;
+}
+
+.card-body button {
+  background-color: blue;
+  color: white;
+}
+
+.card-text.text-muted {
+  font-style: italic;
+  color: white !important;
+}
+
+.card-title.text-muted {
+  text-decoration: underline;
+  color: white !important;
+}
+
+div.mt-4.border.rounded-lg.p-4 {
+    border: solid white !important
+}
+
+.form-control,
+.form-control:active,
+.form-control:focus {
+    color:black;
+    border: black;
+}
+
+
+#name,
+#name:active,
+#name:focus {
+    color: black;
+}
+
