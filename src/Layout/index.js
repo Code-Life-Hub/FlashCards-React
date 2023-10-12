@@ -88,7 +88,7 @@ function Layout() {
                             deleteDeckHandler={deleteDeckHandler}
                         />
                     ) : (
-                        <h2 className="mt-3 text-dark">
+                        <h2 className="mt-3 text-white">
                             No decks have been created
                         </h2>
                     )}
