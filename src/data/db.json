@@ -42,13 +42,6 @@
       "back": "After selecting •View• on a desired deck, you will be presented with a button labeled •Delete•. Clicking Delete will remove the deck from the website.",
       "deckId": 1,
       "id": 6
-    },
-    {
-      "cards": [],
-      "front": "Test",
-      "back": "Testing",
-      "deckId": 1,
-      "id": 7
     }
   ]
 }
