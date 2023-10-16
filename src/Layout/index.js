@@ -19,14 +19,13 @@ import DeckEdit from "./DeckEdit";
 import CreateCard from "./CreateCard";
 import EditCard from "./EditCard";
 
-function Layout() {
-  const defaultDeck = {
-    id: 1,
-    name: "Tutorial",
-    description:
-      "A tutorial / walk through of the website and its functions. For best experience, click 'Study' to go through tutorial in 'Study Mode'.",
-  };
-}
+const defaultDeck = {
+  id: 1,
+  name: "Tutorial",
+  description:
+    "A tutorial / walk through of the website and its functions. For best experience, click 'Study' to go through tutorial in 'Study Mode'.",
+};
+
 const [decks, setDecks] = useState([]);
 const history = useHistory();
 
