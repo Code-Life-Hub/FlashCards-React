@@ -27,16 +27,14 @@ describe("App", () => {
         "Default mock response. If you see this, you probably do not need this API call.",
     });
     createDeck.mockResolvedValue({
-      name:
-        "Default mock response. If you see this, you probably do not need this API call.",
+      name: "Default mock response. If you see this, you probably do not need this API call.",
     });
     deleteCard.mockResolvedValue({
       front:
         "Default mock response. If you see this, you probably do not need this API call.",
     });
     deleteDeck.mockResolvedValue({
-      name:
-        "Default mock response. If you see this, you probably do not need this API call.",
+      name: "Default mock response. If you see this, you probably do not need this API call.",
     });
     listDecks.mockResolvedValue([
       {
@@ -49,16 +47,14 @@ describe("App", () => {
         "Default mock response. If you see this, you probably do not need this API call.",
     });
     readDeck.mockResolvedValue({
-      name:
-        "Default mock response. If you see this, you probably do not need this API call.",
+      name: "Default mock response. If you see this, you probably do not need this API call.",
     });
     updateCard.mockResolvedValue({
       front:
         "Default mock response. If you see this, you probably do not need this API call.",
     });
     updateDeck.mockResolvedValue({
-      name:
-        "Default mock response. If you see this, you probably do not need this API call.",
+      name: "Default mock response. If you see this, you probably do not need this API call.",
     });
   });
 
@@ -77,15 +73,17 @@ describe("App", () => {
     const mockDecks = [
       {
         id: 1,
-        name: "Mock Rendering in React",
-        description: "RIR",
-        cards: [{ id: 2 }, { id: 3 }],
-      },
-      {
-        name: "Mock React Router",
-        description: "RR",
-        id: 2,
-        cards: [],
+        name: "Tutorial",
+        description: "A brief tutorial on the platform.",
+        cards: [
+          { id: 1 },
+          { id: 2 },
+          { id: 3 },
+          { id: 4 },
+          { id: 5 },
+          { id: 6 },
+          { id: 7 },
+        ],
       },
     ];
 
@@ -102,7 +100,7 @@ describe("App", () => {
 
     await act(() => mockDecksPromise);
 
-    expect(screen.getByText("Mock Rendering in React")).toBeTruthy();
+    expect(screen.getByText("Tutorial")).toBeTruthy();
     expect(screen.getByText("2 cards")).toBeTruthy();
     expect(screen.getByText("Mock React Router")).toBeTruthy();
     expect(screen.getByText("0 cards")).toBeTruthy();
