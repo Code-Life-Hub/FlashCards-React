@@ -26,7 +26,11 @@ function Layout() {
     description:
       "A tutorial / walk through of the website and its functions. For best experience, click 'Study' to go through tutorial in 'Study Mode'.",
   };
+}
+const [decks, setDecks] = useState([]);
+const history = useHistory();
 
+function Layout() {
   const [decks, setDecks] = useState([]);
   const history = useHistory();
 
@@ -48,7 +52,7 @@ function Layout() {
 
       setDecks(fetchedDecks);
     });
-  }, [defaultDeck]);
+  }, []);
 
   const submitDeckHandler = (data) => {
     createDeck(data).then((data) => {
