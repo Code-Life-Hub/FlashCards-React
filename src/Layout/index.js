@@ -9,10 +9,8 @@ import {
   deleteDeck,
   createCard,
 } from "../utils/api";
-import { Switch } from "react-router-dom/cjs/react-router-dom.min";
-import { Route } from "react-router-dom/cjs/react-router-dom";
+import { Switch, Route, Link, useHistory } from "react-router-dom";
 import DeckCreate from "./DeckCreate";
-import { Link, useHistory } from "react-router-dom";
 import Study from "./Study";
 import Deck from "./Deck";
 import DeckEdit from "./DeckEdit";
@@ -28,6 +26,7 @@ const defaultDeck = {
 
 function Layout() {
   const [decks, setDecks] = useState([]);
+  const [forceUpdate, setForceUpdate] = useState(false); // New state variable
   const history = useHistory();
 
   useEffect(() => {
@@ -47,8 +46,9 @@ function Layout() {
       });
 
       setDecks(fetchedDecks);
+      setForceUpdate((prev) => !prev); // Toggle forceUpdate state
     });
-  }, []);
+  }, [forceUpdate]); // Add forceUpdate as a dependency
 
   const submitDeckHandler = (data) => {
     createDeck(data).then((data) => {
