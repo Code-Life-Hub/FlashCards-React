@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 
 const Home = ({ decks, deleteDeckHandler }) => {
-  console.log("Home component rendered with decks:", decks);
+  console.log(decks);
 
   // Sort the decks array to ensure the "Tutorial" deck appears first
   const sortedDecks = [...decks].sort((a, b) => {
