@@ -32,15 +32,12 @@ function Layout() {
 
   useEffect(() => {
     listDecks().then((fetchedDecks) => {
-      const tutorialDeckExists = fetchedDecks.some(
-        (deck) => deck.id === defaultDeck.id
-      );
-
-      if (!tutorialDeckExists) {
-        fetchedDecks.unshift(defaultDeck);
-      }
-
-      fetchedDecks.sort((a, b) => a.id - b.id);
+      // Ensure "Tutorial" deck is always first
+      fetchedDecks.sort((a, b) => {
+        if (a.id === 1) return -1;
+        if (b.id === 1) return 1;
+        return a.id - b.id;
+      });
 
       setDecks(fetchedDecks);
     });

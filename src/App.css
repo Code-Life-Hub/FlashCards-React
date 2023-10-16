@@ -4,7 +4,7 @@ body {
 
 header {
   background-image: url("./utils/header-IMG.jpg");
-  border: black;
+  border: solid white;
 }
 
 h1 {
@@ -87,7 +87,7 @@ a.breadcrumb-item {
 .card-body {
   color: white;
   background-image: url("./utils/header-IMG.jpg");
-  border: black;
+  border: solid white;
 }
 
 .card-body button {
