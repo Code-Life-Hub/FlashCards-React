@@ -2,8 +2,6 @@ import React from "react";
 import Card from "./Card";
 
 const Home = ({ decks, deleteDeckHandler }) => {
-  console.log(decks);
-
   // Sort the decks array to ensure the "Tutorial" deck appears first
   const sortedDecks = [...decks].sort((a, b) => {
     if (a.name === "Tutorial") return -1;
