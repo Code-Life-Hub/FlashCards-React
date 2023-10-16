@@ -20,7 +20,6 @@ import CreateCard from "./CreateCard";
 import EditCard from "./EditCard";
 
 function Layout() {
-  // Define the default "Tutorial" deck
   const defaultDeck = {
     id: 1,
     name: "Tutorial",
@@ -31,18 +30,17 @@ function Layout() {
   const [decks, setDecks] = useState([]);
   const history = useHistory();
 
-  // Modified fetching logic to ensure "Tutorial" deck is always present
   useEffect(() => {
     listDecks().then((fetchedDecks) => {
-      // Check if the "Tutorial" deck is present in the fetched data
       const tutorialDeckExists = fetchedDecks.some(
         (deck) => deck.id === defaultDeck.id
       );
 
-      // If not, add it to the fetched decks
       if (!tutorialDeckExists) {
         fetchedDecks.unshift(defaultDeck);
       }
+
+      fetchedDecks.sort((a, b) => a.id - b.id);
 
       setDecks(fetchedDecks);
     });
@@ -70,8 +68,6 @@ function Layout() {
   };
 
   const deleteDeckHandler = (id) => {
-    console.log(id, "Card Component DeleteBtn");
-
     if (
       window.confirm(
         "Are you sure you want to delete this Deck? It can't be undone."
@@ -87,7 +83,6 @@ function Layout() {
   return (
     <div className="container">
       <Header />
-      {/* TODO: Implement the screen starting here */}
       <Switch>
         <Route path="/" exact>
           <Link to="/decks/new" className="btn btn-secondary mb-2">
@@ -117,7 +112,6 @@ function Layout() {
         <Route path="/decks/:deckId/cards/new">
           <CreateCard submitHandler={submitCardHandler} />
         </Route>
-
         <Route>
           <NotFound />
         </Route>
