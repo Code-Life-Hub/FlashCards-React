@@ -48,7 +48,7 @@ function Layout() {
 
       setDecks(fetchedDecks);
     });
-  }, []);
+  }, [defaultDeck]);
 
   const submitDeckHandler = (data) => {
     createDeck(data).then((data) => {
