@@ -16,7 +16,7 @@ function DeckCreate({ submitHandler }) {
                 </span>
             </nav>
             <DeckForm
-                header="Create Deck "
+                header="Create Deck"
                 initialFormData={formData}
                 submitHandler={submitHandler}
             />
